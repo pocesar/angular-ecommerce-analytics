@@ -50,5 +50,5 @@ angular.module('App', ['Analytics']).run(['$analytics', function($analytics){
 ```
 
 ```html
-<a analytics="click" analytics-category="'pay'" analytics-label="'debit'" target="_blank" class="btn btn-primary btn-pagamento" ng-href="{{url}}">Pay with Debit</a>
+<a analytics="click,mouseover,focus" analytics-if="ctrl.isCheckingOut()" analytics-category="'pay'" analytics-label="'debit'" target="_blank" class="btn btn-primary btn-pagamento" ng-href="{{url}}">Pay with Debit</a>
 ```
