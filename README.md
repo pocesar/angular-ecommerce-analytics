@@ -29,6 +29,23 @@ angular.module('App', ['Analytics']).run(['$analytics', function($analytics){
         eventLabel: 'label',
         eventValue: 'value'
     });
+    
+    try {
+        lol++;    
+    } catch (e) {
+      $analytics.exception({
+        exDescription: 'error: ' + e
+      });
+    }
+    
+    $analytics.pageView({
+        // page: '/randomurl/1'
+    });
+    $analytics.social({
+        socialNetwork: 'facebook',
+        socialAction: 'like',
+        socialTarget: url
+    });
 }]);
 ```
 
