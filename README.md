@@ -1,6 +1,12 @@
 # angular-ecommerce-analytics
 [Google Analytics Ecommerce](https://developers.google.com/analytics/devguides/collection/analyticsjs/enhanced-ecommerce) helper with tracking events  
 
+## Install
+
+```bash
+bower install angular-ecommerce-analytics
+```
+
 ## Usage
 
 ```js
