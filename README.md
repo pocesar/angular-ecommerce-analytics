@@ -9,6 +9,8 @@ bower install angular-ecommerce-analytics
 
 ## Usage
 
+#### Service
+
 ```js
 // add your GA.js code before this script
 angular.module('App', ['Analytics']).run(['$analytics', function($analytics){
@@ -55,6 +57,27 @@ angular.module('App', ['Analytics']).run(['$analytics', function($analytics){
 }]);
 ```
 
+#### Directive
+
+* `analytics` Support multiple events, either separated by space or by commas
+* `analytics-if` Conditional to trigger the sending of the event, optional
+* `analytics-category` Category of the event
+* `analytics-label` How it will show in the analytics panel
+* `analytics-value` The value assigned to the event
+
+Every attribute are evaluated for expressions, so literal strings must be set as `'some string'`
+
+The same events (click, mouseover, mouseenter, etc) still fires, since the directive won't do anything to
+the event, and just send tracking data.
+
 ```html
-<a analytics="click,mouseover,focus" analytics-if="ctrl.isCheckingOut()" analytics-category="'pay'" analytics-label="'debit'" target="_blank" class="btn btn-primary btn-pagamento" ng-href="{{url}}">Pay with Debit</a>
+<a 
+   analytics="click,mouseover,focus" 
+   analytics-if="ctrl.isCheckingOut()" 
+   analytics-category="'pay'" 
+   analytics-label="'debit'" 
+   target="_blank" 
+   class="btn btn-primary btn-pagamento" 
+   ng-href="{{url}}"
+   >Pay with Debit</a>
 ```
