@@ -1,6 +1,7 @@
 {
   "name":"angular-ecommerce-analytics",
   "description":"Google Analytics Ecommerce helper with tracking events",
+  "main": "angular-ecommerce-analytics.js",
   "ignore": [
     "**/.*",
     "bower_components",
